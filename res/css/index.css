@@ -1,0 +1,306 @@
+/* 🌟 รีเซ็ตค่าเริ่มต้น */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Prompt", sans-serif;
+}
+
+/* 🌈 พื้นหลังหลัก */
+body {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f8f8 50%, #f0f0f0 100%);
+  color: #2b2b2b;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* 🏷️ HEADER */
+header {
+  background: linear-gradient(90deg, #d4af37, #c0c0c0);
+  color: #fff;
+  text-align: center;
+  padding: 20px 20px 15px 20px; /* ปรับ padding ให้บาลานซ์กับโลโก้ */
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* 🟡 โลโก้ (ปรับใหม่ไม่บัง sidebar) */
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  padding: 10px 0;
+  margin-top: 5px;
+  position: relative;
+  z-index: 2; /* โลโก้อยู่เหนือพื้นหลัง แต่ไม่บัง sidebar */
+}
+
+.logo img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* 🔤 ข้อความใน Header */
+header h1 {
+  font-size: 2rem;
+  letter-spacing: 1.2px;
+  margin-bottom: 5px;
+}
+
+header h2 {
+  font-size: 1rem;
+  font-weight: 300;
+  opacity: 0.9;
+}
+
+/* 📂 SIDEBAR */
+.sidebar {
+  width: 230px;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(6px);
+  border-right: 2px solid rgba(212, 175, 55, 0.3);
+  position: fixed;
+  top: 110px; /* เดิม 90px → เพิ่ม 20px เพื่อหลบโลโก้ */
+  left: 0;
+  height: calc(100% - 110px);
+  padding-top: 20px;
+  box-shadow: 4px 0 12px rgba(0, 0, 0, 0.05);
+  overflow-y: auto;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0 15px;
+}
+
+.sidebar ul li {
+  margin: 10px 0;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: #444;
+  font-weight: 500;
+  display: block;
+  padding: 12px 18px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+  background: linear-gradient(90deg, #d4af37, #c0c0c0);
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(212, 175, 55, 0.3);
+  transform: translateX(5px);
+}
+
+/* 🧭 MAIN CONTENT */
+main {
+  margin-left: 250px;
+  padding: 40px;
+}
+
+.intro {
+  background: rgba(255, 255, 255, 0.85);
+  border-left: 5px solid #d4af37;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin-bottom: 40px;
+  animation: fadeIn 1s ease;
+}
+
+.intro h2 {
+  color: #d4af37;
+  margin-bottom: 10px;
+}
+
+/* 🍽️ MENU PAGE */
+.menu h3 {
+  color: #c0a030;
+  margin-bottom: 20px;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.menu-item {
+  background: rgba(255, 255, 255, 0.75);
+  border-radius: 15px;
+  padding: 15px;
+  text-align: center;
+  transition: all 0.4s ease;
+  border: 1px solid rgba(192, 192, 192, 0.4);
+  backdrop-filter: blur(6px);
+}
+
+.menu-item img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.4s ease;
+}
+
+.menu-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(212, 175, 55, 0.25);
+}
+
+.menu-item:hover img {
+  transform: scale(1.05);
+}
+
+.menu-item h4 {
+  margin: 10px 0;
+  font-weight: 500;
+  color: #333;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 👨‍🍳 MEMBER PAGE */
+.member-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.member-card {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  text-align: center;
+  max-width: 400px;
+  transition: all 0.4s ease;
+}
+
+.member-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(212, 175, 55, 0.25);
+}
+
+.member-card img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  border: 3px solid #d4af37;
+}
+
+.member-card h2 {
+  color: #d4af37;
+  margin-bottom: 10px;
+}
+
+.member-card p {
+  color: #444;
+  line-height: 1.5;
+  font-size: 1rem;
+}
+
+/* 📞 CONTACT PAGE */
+.contact-info {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  padding: 30px;
+  max-width: 600px;
+  margin: auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info h3 {
+  color: #d4af37;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.contact-info p {
+  font-size: 1rem;
+  margin: 8px 0;
+  color: #444;
+}
+
+.contact-info a {
+  color: #d4af37;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.contact-info a:hover {
+  color: #b2952e;
+  text-decoration: underline;
+}
+
+/* 🔙 ปุ่มกลับหน้าหลัก */
+.btn-back {
+  display: inline-block;
+  margin-top: 25px;
+  background: linear-gradient(90deg, #d4af37, #c0c0c0);
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.btn-back:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+
+/* 🦶 FOOTER */
+footer {
+  margin-top: auto;
+  text-align: center;
+  padding: 12px;
+  background: linear-gradient(90deg, #c0c0c0, #d4af37);
+  color: white;
+  font-size: 0.9rem;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ✨ ANIMATION */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* 📱 RESPONSIVE */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 180px;
+    top: 120px; /* ปรับตามโลโก้ */
+    height: calc(100% - 120px);
+  }
+
+  main {
+    margin-left: 200px;
+    padding: 25px;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  .member-card img {
+    width: 120px;
+    height: 120px;
+  }
+}

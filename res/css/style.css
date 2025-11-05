@@ -1,0 +1,67 @@
+/* 🌟 รีเซ็ตค่าเริ่มต้น */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Prompt", sans-serif;
+}
+
+/* 🌈 พื้นหลังหลัก */
+body {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f8f8 50%, #f0f0f0 100%);
+  color: #2b2b2b;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* 🔤 ข้อความใน Header */
+header h1 {
+  font-size: 2rem;
+  letter-spacing: 1.2px;
+  margin-bottom: 5px;
+}
+
+header h2 {
+  font-size: 1rem;
+  font-weight: 300;
+  opacity: 0.9;
+}
+
+/* 🧭 MAIN CONTENT */
+main {
+  margin-left: 250px;
+  padding: 40px;
+}
+
+.intro {
+  background: rgba(255, 255, 255, 0.85);
+  border-left: 5px solid #d4af37;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin-bottom: 40px;
+  animation: fadeIn 1s ease;
+}
+
+.intro h2 {
+  color: #d4af37;
+  margin-bottom: 10px;
+}
+
+/* 🦶 FOOTER */
+footer {
+  margin-top: auto;
+  text-align: center;
+  padding: 12px;
+  background: linear-gradient(90deg, #c0c0c0, #d4af37);
+  color: white;
+  font-size: 0.9rem;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ✨ ANIMATION */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}

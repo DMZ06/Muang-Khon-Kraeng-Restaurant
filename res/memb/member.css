@@ -1,0 +1,111 @@
+/* รีเซ็ตค่าเริ่มต้น */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Prompt", sans-serif;
+}
+
+/* พื้นหลังหลัก */
+body {
+  background-color: #fffefb;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ส่วนหัว */
+header {
+  text-align: center;
+  background-color: #e0c66d;
+  color: #fff;
+  padding: 20px 10px;
+}
+
+header h1 {
+  font-size: 28px;
+  margin-bottom: 5px;
+}
+
+header h2 {
+  font-size: 18px;
+}
+
+/* ส่วนหลัก */
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 10px;
+}
+
+.member-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.member-card {
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  width: 320px;
+  text-align: center;
+  padding: 20px;
+}
+
+.member-card img {
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+.info h2 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.info p {
+  color: #555;
+  margin-bottom: 5px;
+  font-size: 15px;
+}
+
+/* ส่วนท้าย */
+footer {
+  background-color: #f0f0f0;
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 14px;
+  color: #555;
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ปุ่มกลับหน้าหลัก */
+.back-btn {
+  display: inline-block;
+  background: linear-gradient(90deg, #d4af37, #c0c0c0);
+  color: #fff;
+  padding: 10px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 3px 8px rgba(212, 175, 55, 0.4);
+}
